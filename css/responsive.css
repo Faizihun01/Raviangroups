@@ -1,0 +1,299 @@
+/* ===========================
+   CONSTRUCTION COMPANY WEBSITE
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* ========== TABLET (768px and down) ========== */
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .section {
+    padding: var(--space-2xl) var(--container-padding);
+  }
+
+  /* Header Navigation */
+  header {
+    padding: var(--space-md) 0;
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  nav {
+    width: 100%;
+    gap: var(--space-lg);
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    padding: var(--space-md);
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Grid and Layout */
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    flex: 1 0 100%;
+    padding: var(--space-md) 0;
+  }
+
+  /* Buttons */
+  .btn {
+    width: 100%;
+  }
+
+  .btn-lg {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section ul {
+    margin: 0;
+  }
+}
+
+/* ========== MOBILE (576px and down) ========== */
+
+@media (max-width: 576px) {
+  :root {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  h4, h5, h6 {
+    font-size: var(--font-size-base);
+  }
+
+  .container {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  .section {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  /* Header */
+  header {
+    padding: var(--space-md) 0;
+  }
+
+  .logo {
+    font-size: var(--font-size-xl);
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  nav {
+    gap: var(--space-md);
+  }
+
+  /* Navigation */
+  .nav-toggle {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Forms */
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+
+  input,
+  textarea,
+  select {
+    padding: var(--space-md);
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Cards */
+  .card {
+    padding: var(--space-lg);
+  }
+
+  /* Footer */
+  .footer-content {
+    gap: var(--space-lg);
+  }
+
+  .footer-bottom {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* ========== SMALL MOBILE (320px and up) ========== */
+
+@media (max-width: 360px) {
+  .btn {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ========== DESKTOP ENHANCEMENTS (992px and up) ========== */
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .section {
+    padding: var(--space-4xl) var(--container-padding);
+  }
+
+  /* Hide mobile nav toggle on desktop */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Desktop menu always visible */
+  nav ul {
+    display: flex !important;
+    position: static !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    gap: var(--space-2xl) !important;
+    flex-direction: row !important;
+  }
+
+  nav ul li {
+    width: auto;
+  }
+
+  nav a {
+    padding: var(--space-sm) var(--space-md);
+    display: inline;
+  }
+
+  /* Hover animations */
+  .card {
+    --transform-origin: center;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* ========== LARGE DESKTOP (1200px and up) ========== */
+
+@media (min-width: 1200px) {
+  .section {
+    padding: var(--space-4xl) var(--container-padding);
+  }
+}
+
+/* ========== PRINT STYLES ========== */
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* ========== ACCESSIBILITY: PREFERS REDUCED MOTION ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========== DARK MODE SUPPORT (Optional Future Addition) ========== */
+
+@media (prefers-color-scheme: dark) {
+  /* Styles for dark mode can be added here in the future */
+  /* Currently, the light theme is the default */
+}

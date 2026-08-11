@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact our construction company for a consultation, quote, or project inquiry.">
+  <meta name="theme-color" content="#2c3e50">
+  
+  <title>Contact | Construction Company</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  
+  <!-- Contact Page Styles -->
+  <style>
+    .form-message {
+      padding: var(--space-md);
+      border-radius: var(--border-radius-md);
+      margin-bottom: var(--space-lg);
+      text-align: center;
+      font-weight: var(--font-weight-medium);
+    }
+
+    .form-message--success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .form-message--error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    input.error,
+    textarea.error {
+      border-color: var(--error-color) !important;
+      background-color: #ffe6e6;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-2xl);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .contact-item {
+      background-color: var(--light-gray);
+      padding: var(--space-xl);
+      border-radius: var(--border-radius-lg);
+    }
+
+    .contact-item h3 {
+      color: var(--secondary-color);
+      margin-bottom: var(--space-md);
+    }
+
+    .contact-item p {
+      margin-bottom: var(--space-sm);
+    }
+
+    .contact-item a {
+      color: var(--accent-color);
+      font-weight: var(--font-weight-medium);
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: var(--light-gray);
+      padding: var(--space-2xl);
+      border-radius: var(--border-radius-lg);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .form-row .form-group {
+      margin-bottom: 0;
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .contact-overview {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .contact-copy {
+      text-align: left;
+    }
+
+    .contact-image-wrap {
+      text-align: center;
+    }
+
+    .contact-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--border-radius-lg);
+    }
+
+    .section-cta {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER & NAVIGATION ========== -->
+<header>
+  <div class="container">
+    <div class="header-content">
+      <a href="../index.html" class="logo">
+        <span class="logo-text">Ravian Construction</span>
+      </a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        ☰
+      </button>
+
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main>
+
+  <!-- Page Header -->
+  <section class="section page-hero page-hero--contact" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 4rem 1rem; text-align: center;">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p style="font-size: 1.125rem; color: #ecf0f1;">
+        We'd love to hear about your project. Contact us today for a consultation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-overview">
+        <div class="contact-copy">
+          <h2 style="text-align: left; margin-bottom: 1.5rem;">Contact Information</h2>
+          <p>
+            Reach out to discuss your project requirements, timelines, or tender opportunities with Ravian Construction.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h3>Phone</h3>
+          <p>
+            <a href="tel:+1234567890">(123) 456-7890</a>
+          </p>
+          <p style="font-size: var(--font-size-sm); color: var(--medium-gray);">
+            Monday - Friday: 8:00 AM - 6:00 PM
+          </p>
+        </div>
+        
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:info@company.com">info@company.com</a>
+          </p>
+          <p style="font-size: var(--font-size-sm); color: var(--medium-gray);">
+            We respond within 24 hours
+          </p>
+        </div>
+        
+        <div class="contact-item">
+          <h3>Address</h3>
+          <p>Jinnah Colony<br>Faisalabad, Pakistan</p>
+          <p style="font-size: var(--font-size-sm); color: var(--medium-gray);">
+            [Office Hours - to be provided]
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem;">Send Us a Message</h2>
+      
+      <div class="form-container">
+        <form name="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required aria-required="true">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" required aria-required="true">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required aria-required="true"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Send Message
+          </button>
+
+          <p style="font-size: var(--font-size-sm); color: var(--medium-gray); text-align: center; margin-top: var(--space-md);">
+            * Required fields
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section section-cta" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; text-align: center;">
+    <div class="container">
+      <h2>Have Questions?</h2>
+      <p style="font-size: 1.125rem; margin-bottom: 2rem; color: #ecf0f1;">
+        Feel free to reach out. We're here to help!
+      </p>
+      <a href="tel:+1234567890" class="btn btn-white btn-lg">Call Us Now</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Ravian Construction</h3>
+        <p>Professional construction solutions for all your building needs.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+1234567890">Phone: (123) 456-7890</a></li>
+          <li><a href="mailto:info@company.com">Email: info@company.com</a></li>
+          <li>Address: Jinnah Colony Faisalabad Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ravian Construction. All rights reserved. | Website by Muhammad Faizan | faizzii676@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="../js/main.js"></script>
+
+</body>
+</html>
