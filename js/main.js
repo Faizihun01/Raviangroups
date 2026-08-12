@@ -242,6 +242,25 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.section').forEach(section => {
     observer.observe(section);
   });
+
+  // Observe certificates images for staggered reveal
+  const certGrid = document.querySelector('.cert-grid');
+  if (certGrid) {
+    const certImgs = certGrid.querySelectorAll('.cert-img');
+    const certObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Stagger the reveal: left, center, right
+          certImgs.forEach((img, idx) => {
+            setTimeout(() => img.classList.add('is-visible'), idx * 220);
+          });
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+
+    certObserver.observe(certGrid);
+  }
 }
 
 // ========== UTILITY FUNCTIONS ==========

@@ -18,6 +18,12 @@
   --warning-color: #f5ae1b;           /* For caution messages */
   --error-color: #ea4b4f;             /* For errors */
 
+  /* Navbar (light theme overrides) */
+  --navbar-bg: #ffffff;               /* White navbar background */
+  --navbar-text: #212a31;             /* Dark text on navbar */
+  --navbar-border: rgba(0, 0, 0, 0.06); /* Subtle bottom border */
+  --navbar-hover-bg: rgba(0, 0, 0, 0.04); /* Hover background */
+
   /* Typography */
   --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
