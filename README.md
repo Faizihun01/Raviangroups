@@ -1,6 +1,6 @@
-# Ravian Construction Website
+# Ravian Construction Co Website
 
-A clean, professional static website for Ravian Construction. Built with HTML5, CSS3, and vanilla JavaScript.
+A clean, professional static website for Ravian Construction Co. Built with HTML5, CSS3, and vanilla JavaScript.
 
 ## Project Overview
 

@@ -21,7 +21,7 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
   color: var(--dark-gray);
-  background-color: var(--white);
+  background-color: var(--background-color);
 }
 
 /* ========== TYPOGRAPHY ========== */
@@ -108,7 +108,7 @@ a:hover {
 /* ========== HEADER & NAVIGATION ========== */
 
 header {
-  background-color: var(--primary-color);
+  background-color: var(--surface-color);
   color: var(--white);
   padding: var(--space-lg) 0;
   position: sticky;
@@ -129,8 +129,9 @@ header {
   color: var(--white);
   text-decoration: none;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-xs);
 }
 
 .logo:hover {
@@ -139,6 +140,18 @@ header {
 
 .logo-text {
   letter-spacing: -0.5px;
+}
+
+/* Logo image in navbar */
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .logo-img { height: 36px; }
+  .logo-text { display: none; }
 }
 
 nav {
@@ -178,7 +191,7 @@ nav a.nav-cta {
 
 nav a.nav-cta.is-current-page {
   background-color: var(--white);
-  color: var(--secondary-color);
+  color: var(--surface-color);
   border-color: var(--white);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
 }
@@ -220,7 +233,7 @@ nav a.nav-cta.is-current-page:hover {
 }
 
 .btn-primary:hover {
-  background-color: #c0392b;
+  background-color: #d69b20;
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -239,11 +252,11 @@ nav a.nav-cta.is-current-page:hover {
 
 .btn-white {
   background-color: var(--white);
-  color: var(--primary-color);
+  color: var(--surface-color);
 }
 
 .btn-white:hover {
-  background-color: var(--light-gray);
+  background-color: #eef2f7;
   transform: translateY(-2px);
 }
 
@@ -459,7 +472,7 @@ textarea {
 /* ========== FOOTER ========== */
 
 footer {
-  background-color: var(--primary-color);
+  background-color: var(--surface-color);
   color: var(--white);
   padding: var(--space-3xl) 0 var(--space-xl) 0;
   margin-top: var(--space-4xl);
@@ -537,7 +550,7 @@ footer {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(15, 23, 31, 0.82) 0%, rgba(15, 23, 31, 0.58) 40%, rgba(15, 23, 31, 0.55) 100%);
+  background: linear-gradient(120deg, rgba(16, 22, 32, 0.84) 0%, rgba(16, 22, 32, 0.58) 40%, rgba(16, 22, 32, 0.56) 100%);
 }
 
 .hero-content {
@@ -693,17 +706,26 @@ footer {
   position: relative;
   background-size: cover;
   background-position: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: var(--white);
 }
 
 .page-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10,16,22,0.4) 0%, rgba(10,16,22,0.6) 100%);
+  background: linear-gradient(180deg, rgba(16, 22, 32, 0.42) 0%, rgba(16, 22, 32, 0.66) 100%);
   z-index: 0;
 }
 
 .page-hero .container { position: relative; z-index: 1; }
+
+.section-cta {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #c38615 100%);
+  color: var(--white);
+  text-align: center;
+}
 
 /* Specific hero images for pages (use existing assets) */
 .page-hero--about { background-image: url('../assets/images/engmeet.webp'); }

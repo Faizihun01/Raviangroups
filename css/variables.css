@@ -5,16 +5,18 @@
 
 :root {
   /* Brand Colors */
-  --primary-color: #2c3e50;           /* Deep blue-gray - Trust & Professionalism */
-  --secondary-color: #e74c3c;         /* Professional red - Energy & Action */
-  --accent-color: #3498db;            /* Accent blue - Highlights */
-  --light-gray: #ecf0f1;              /* Light background */
-  --medium-gray: #95a5a6;             /* Medium text/borders */
-  --dark-gray: #34495e;               /* Dark text */
+  --primary-color: #101820;           /* Rich charcoal - bold foundation */
+  --surface-color: #19202a;           /* Dark surface for header/footer */
+  --secondary-color: #f5ae1b;         /* Warm amber - energetic accent */
+  --accent-color: #20c5aa;            /* Fresh teal - bright highlight */
+  --light-gray: #f6f7fb;              /* Light background */
+  --medium-gray: #8d97a2;             /* Soft text/borders */
+  --dark-gray: #212a31;               /* Main body text */
+  --background-color: #f8f9fb;        /* Page background */
   --white: #ffffff;
-  --success-color: #27ae60;            /* For positive feedback */
-  --warning-color: #f39c12;            /* For caution messages */
-  --error-color: #e74c3c;              /* For errors */
+  --success-color: #23b58c;           /* For positive feedback */
+  --warning-color: #f5ae1b;           /* For caution messages */
+  --error-color: #ea4b4f;             /* For errors */
 
   /* Typography */
   --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
