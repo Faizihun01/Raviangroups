@@ -146,7 +146,7 @@
   }
 
   .logo-text {
-    font-size: var(--font-size-base);
+    display: none;
   }
 
   nav {
