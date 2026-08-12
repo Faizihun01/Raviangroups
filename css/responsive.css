@@ -150,11 +150,12 @@
   }
 
   .logo {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
+    gap: var(--space-xs);
   }
 
-  .logo-text {
-    display: none;
+  .logo-img {
+    height: 36px;
   }
 
   nav {
@@ -194,9 +195,18 @@
   }
 }
 
-/* ========== SMALL MOBILE (320px and up) ========== */
+/* ========== SMALL MOBILE (360px and down) ========== */
 
 @media (max-width: 360px) {
+  .logo {
+    font-size: var(--font-size-base);
+    gap: var(--space-xs);
+  }
+
+  .logo-img {
+    height: 32px;
+  }
+
   .btn {
     padding: var(--space-md) var(--space-sm);
   }
