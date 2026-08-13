@@ -224,6 +224,106 @@
   }
 }
 
+/* ========== TABLET LANDSCAPE / SMALL LAPTOP (769px - 991px) ========== */
+
+@media (min-width: 769px) and (max-width: 991px) {
+  :root {
+    font-size: 15px;
+  }
+
+  /* Navigation: keep horizontal but tighter */
+  .header-content {
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  nav a.nav-cta {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  /* Service cards: 2 columns */
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    min-height: 280px;
+  }
+
+  /* Intro & contact: stack vertically */
+  .intro-layout,
+  .contact-overview {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Why choose us: 2 columns */
+  .row {
+    flex-direction: row;
+  }
+
+  .col {
+    flex: 1 0 50%;
+    padding: var(--space-md);
+  }
+
+  .col:last-child {
+    flex: 1 0 100%;
+    margin-top: var(--space-md);
+  }
+
+  /* Footer: 2 columns */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Hero */
+  .hero-slider {
+    min-height: 520px;
+  }
+
+  .hero-content {
+    min-height: 520px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-content h1,
+  .hero-content h2 {
+    font-size: 2.6rem;
+  }
+
+  /* Certificates */
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cert-img {
+    height: 220px;
+  }
+}
+
 /* ========== DESKTOP ENHANCEMENTS (992px and up) ========== */
 
 @media (min-width: 992px) {

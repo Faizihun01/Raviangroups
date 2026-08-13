@@ -133,19 +133,12 @@ header {
   flex-direction: row;
   align-items: center;
   gap: var(--space-sm);
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow: hidden;
 }
 
 .logo-text {
   display: inline-block;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   letter-spacing: -0.5px;
-  max-width: 220px;
-  min-width: 50px;
   vertical-align: middle;
 }
 
@@ -776,13 +769,20 @@ footer {
   .cert-img { height: 320px; }
 }
 
-/* Service grid layout tweak: 3 on top, 2 beneath (large screens)
-   Place 4th in column 1 and 5th in column 3 to visually center the pair */
+/* Desktop: 3 on top, 2 centered below */
 @media (min-width: 992px) {
-  .service-grid { grid-template-columns: repeat(3, 1fr); }
-  .service-card { min-height: 320px; }
-  .service-card:nth-child(4) { grid-column: 1; }
-  .service-card:nth-child(5) { grid-column: 3; }
+  .service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+  }
+  .service-card {
+    flex: 0 0 calc(33.333% - 1rem);
+    min-width: 280px;
+    max-width: 380px;
+    min-height: 320px;
+  }
 }
 
 .contact-copy {
@@ -978,89 +978,39 @@ footer {
   }
 }
 
+/* ========== MOBILE HEADER & LOGO ========== */
 
-/* ========== MOBILE LOGO TEXT BULLETPROOF FIX ========== */
+@media (max-width: 768px) {
+  .header-content {
+    position: relative;
+    justify-content: center;
+    padding-right: 3rem;
+  }
 
-.logo-text {
-  display: inline-block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 220px;
-  min-width: 50px;
-  vertical-align: middle;
+  .logo {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 @media (max-width: 576px) {
   .logo-text {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    max-width: 160px;
-    font-size: 0.95rem;
-  }
-
-  .logo-img {
-    height: 34px !important;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 400px) {
   .logo-text {
-    max-width: 130px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
-
-  .logo-img {
-    height: 30px !important;
-  }
-}
-
-@media (max-width: 340px) {
-  .logo-text {
-    max-width: 110px;
-    font-size: 0.8rem;
-  }
-}
-
-
-/* ========== NUCLEAR LOGO FIX ========== */
-/* This MUST be the LAST rule in the file to win all specificity battles */
-
-header .header-content a.logo span.logo-text {
-  display: inline-block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  color: var(--primary-color) !important;
-  font-size: inherit !important;
-}
-
-@media (max-width: 576px) {
-  header .header-content a.logo span.logo-text {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    max-width: 160px !important;
-    font-size: 0.95rem !important;
-    color: var(--primary-color) !important;
-  }
-}
-
-@media (max-width: 400px) {
-  header .header-content a.logo span.logo-text {
-    max-width: 130px !important;
-    font-size: 0.85rem !important;
-  }
-}
-
-@media (max-width: 340px) {
-  header .header-content a.logo span.logo-text {
-    max-width: 110px !important;
-    font-size: 0.8rem !important;
+  .header-content {
+    padding-right: 2.5rem;
   }
 }
