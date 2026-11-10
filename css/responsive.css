@@ -107,6 +107,10 @@
     text-align: center;
   }
 
+  .footer-brand {
+    flex-direction: column;
+  }
+
   .footer-section ul {
     margin: 0;
   }
