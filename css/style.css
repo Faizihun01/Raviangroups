@@ -498,6 +498,13 @@ footer {
   margin-bottom: var(--space-lg);
 }
 
+.footer-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
 .footer-section ul {
   list-style: none;
 }
