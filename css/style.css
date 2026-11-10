@@ -500,6 +500,7 @@ footer {
 
 .footer-brand {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--space-md);
   margin-bottom: var(--space-md);

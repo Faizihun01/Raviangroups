@@ -108,7 +108,16 @@
   }
 
   .footer-brand {
+    width: fit-content;
+    max-width: 100%;
     flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .footer-brand h3 {
+    text-align: center;
   }
 
   .footer-section ul {
